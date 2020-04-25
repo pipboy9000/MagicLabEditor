@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-76187604-21"></script>
+
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-76187604-21');
+    </script>
+    <script src="https://kit.fontawesome.com/cc5753dce5.js" crossorigin="anonymous"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Magic Lab</title>
+</head>
+
+<body>
+    <div class="main">
+        <div id="menu">
+
+        </div>
+        <canvas id="canvas" width="800" height="800"></canvas>
+        <div id="ui">
+            <div id="target">
+
+            </div>
+            <div id="msg">
+
+            </div>
+        </div>
+        <div id="recipe" class="recipe">
+
+        </div>
+        <div class="potions">
+            <button id="addBlue"><i class="fas fa-vial"></i></button>
+            <button id="addRed"><i class="fas fa-vial"></i></button>
+            <button id="addGreen"><i class="fas fa-vial"></i></button>
+            <button id="addOrange"><i class="fas fa-vial"></i></button>
+        </div>
+        <button id="restart">X</button>
+
+    </div>
+    <div class="controls">
+        <label>Minimum Segment Length</label>
+        <input type="range" min="0" max="200" value="100" id="segLength">
+        <label>Minimum Joint Radius</label>
+        <input type="range" min="1" max="200" value="20" id="cornerRad">
+        <label>Minimum Joint Angle</label>
+        <input type="range" min="0" max="6.2831" value="0.7853981634" step="0.001" id="cornerAngle">
+        <label>Color Change Rate</label>
+        <input type="range" min="0" max="360" value="0" id="color">
+        <label>Fade</label>
+        <input type="range" min="2" max="255" value="20" id="fade">
+        <button id="save">Save</button>
+        <button id="getLevels">get levels</button>
+    </div>
+
+    <script src="bundle.js"></script>
+
+    <style>
+        body {
+            padding: 0;
+            margin: 0;
+            overflow: hidden;
+        }
+
+        .main {
+            position: relative;
+            width: 100%;
+            display: inline-flex;
+            flex-direction: column;
+            align-items: center;
+            max-width: 500px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        button:focus {
+            outline: 0;
+        }
+
+        .controls {
+            display: inline-block;
+            position: absolute;
+            max-width: 300px;
+            background: #202020;
+            box-sizing: border-box;
+            padding: 10px;
+            border-radius: 5px;
+            margin: 10px;
+        }
+    </style>
+</body>
+
+</html>

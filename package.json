@@ -1,0 +1,31 @@
+{
+  "name": "magiclab",
+  "version": "1.0.0",
+  "description": "",
+  "main": "script.js",
+  "scripts": {
+    "copy-index": "copy src\\index.html dist\\index.html",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack",
+    "build-i": "npm-run-all -s build copy-index",
+    "webpack-dev-server": "webpack-dev-server --config webpack.config-dev.js --open",
+    "dev": "npm-run-all -s build webpack-dev-server",
+    "start": "cd dist && live-server"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.8.3",
+    "babel-loader": "^8.0.6",
+    "css-loader": "^3.5.2",
+    "file-loader": "^5.0.2",
+    "npm-run-all": "^4.1.5",
+    "webpack": "^4.41.5",
+    "webpack-cli": "^3.3.10",
+    "webpack-dev-server": "^3.10.1"
+  },
+  "dependencies": {
+    "eventbusjs": "^0.2.0",
+    "style-loader": "^1.1.3"
+  }
+}
