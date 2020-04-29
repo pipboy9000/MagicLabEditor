@@ -5,12 +5,6 @@ let level = {}
 
 export function add(color) {
 
-    if (level[color]) {
-        level[color] += 1;
-    } else {
-        level[color] = 1;
-    }
-
     potions.push(color);
 
     render();

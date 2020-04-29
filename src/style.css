@@ -135,7 +135,7 @@ canvas {
   height: auto;
   max-height: 100%;
   display: inline-block;
-  border: 3px solid white;
+  /* border: 3px solid white; */
   border-radius: 7px;
   /* box-sizing: border-box; */
 }
@@ -210,14 +210,14 @@ label {
 }
 
 #addOrange{
-  background: hsla(60, 82%, 42%, 1);
-  border: 5px solid hsla(60, 83%, 34%, 1);
-  box-shadow: 0px 0px 0px 3px hsla(60, 82%, 42%, 1), 0px 8px 0px 3px hsla(60, 83%, 24%, 1);
+  background: hsl(30, 100%, 55%);
+  border: 5px solid hsla(0, 0%, 0%, 0.15);
+  box-shadow: 0px 0px 0px 3px hsl(30, 100%, 57%), 0px 8px 0px 3px hsl(30, 83%, 31%);
 }
 
 #addOrange:active {
   transform: translate(0px, 6px);
-  box-shadow: 0px 0px 0px 3px hsla(60, 82%, 42%, 1), 0px 2px 0px 3px hsla(60, 83%, 24%, 1);
+  box-shadow: 0px 0px 0px 3px hsl(30, 100%, 57%), 0px 2px 0px 3px hsl(30, 83%, 31%);
 }
 
 
@@ -284,6 +284,10 @@ label {
   background: #23ef29;
 }
 
+#recipe > .orange {
+  background: #ff9426;
+}
+
 #recipe > .grey {
   background: #888;
 }
@@ -316,4 +320,44 @@ label {
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+header {
+  width: 100%;
+  max-width: 800px;
+  height: 60px;
+  display: block;
+}
+
+header > i {
+  float: right;
+  width: 60px;
+  height: 60px;
+  color: white;
+  font-size: 30px;
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+}
+
+#levelSelect {
+  position: absolute;
+  display: none;
+  background: black;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  min-height: 360px;
+  box-sizing: border-box;
+}
+
+#levelsList {
+  display: flex;
+}
+
+.levelsItem {
+  width: 80px;
+  height: 80px;
+  background-size: contain;
 }

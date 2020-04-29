@@ -38,6 +38,9 @@ function addRed() {
 function addGreen() {
     pot.addGreen();
 }
+function addOrange() {
+    pot.addOrange();
+}
 
 //input functions
 function init() {
@@ -50,6 +53,7 @@ function init() {
     document.getElementById("addBlue").addEventListener('mousedown', addBlue);
     document.getElementById("addRed").addEventListener('mousedown', addRed);
     document.getElementById("addGreen").addEventListener('mousedown', addGreen);
+    document.getElementById("addOrange").addEventListener('mousedown', addOrange);
     document.getElementById("save").addEventListener('click', pot.save);
     document.getElementById("getLevels").addEventListener('click', levels.log);
 
